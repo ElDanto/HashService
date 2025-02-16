@@ -8,5 +8,5 @@
     `go generate ./...`
 
 ## Build (Test)
-1. docker build -t hash_service:v0.0.1 . 
-2. docker run -rm -ti hash_service:v0.0.1
+1. `docker build -t hash_service:v0.0.1 .` 
+2. `docker run -rm -ti hash_service:v0.0.1`
