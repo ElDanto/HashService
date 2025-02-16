@@ -4,7 +4,7 @@ package hash;
 
 option go_package = "/hash";
 
-service Reverse {rpc Do(Request) returns (Response);}
+service Hash {rpc Do(Request) returns (Response);}
 
 message Request {
   //  string message = 1;

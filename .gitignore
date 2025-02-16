@@ -1,6 +1,6 @@
 *.log
 *.yaml
 !*.example.yaml
-!composer.yaml
+!compose.yaml
 .idea/
 *.pb.go

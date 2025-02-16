@@ -1,0 +1,33 @@
+name: hash-service
+
+services:
+  server:
+    image: "hash_service:v0.0.1server"
+    build:
+      dockerfile: DockerfileServer
+    ports:
+      - "8000:80"
+    networks:
+      - redis-network
+  cron:
+    image: "hash_service:v0.0.1cron"
+    build:
+      dockerfile: DockerfileCron
+    networks:
+      - redis-network
+
+  redis:
+    image: "redis:8.0-M03-alpine3.21"
+    ports:
+      - "5353:6379"
+    networks:
+      - redis-network
+    volumes:
+      - redis-volume:/data:rw
+    restart: unless-stopped
+
+volumes:
+  redis-volume: { }
+
+networks:
+  redis-network: { }

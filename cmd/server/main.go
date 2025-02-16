@@ -10,7 +10,7 @@ import (
 )
 
 type server struct {
-	pb.UnimplementedReverseServer
+	pb.UnimplementedHashServer
 }
 
 func (s *server) Do(ctx context.Context, in *pb.Request) (*pb.Response, error) {
@@ -30,8 +30,8 @@ func main() {
 
 	grpcServer := grpc.NewServer()
 	reflection.Register(grpcServer)
-	pb.RegisterReverseServer(grpcServer, &server{
-		UnimplementedReverseServer: pb.UnimplementedReverseServer{},
+	pb.RegisterHashServer(grpcServer, &server{
+		UnimplementedHashServer: pb.UnimplementedHashServer{},
 	})
 
 	if err := grpcServer.Serve(listener); err != nil {
