@@ -1,0 +1,6 @@
+*.log
+*.yaml
+!*.example.yaml
+!composer.yaml
+.idea/
+*.pb.go

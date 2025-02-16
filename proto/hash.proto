@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package hash;
+
+option go_package = "/hash";
+
+service Reverse {rpc Do(Request) returns (Response);}
+
+message Request {
+  //  string message = 1;
+  //  optional string d = 3;
+  //  repeated string e = 4;
+  //  reserved 2, 15, 9 to 11;
+  reserved 1;
+}
+
+message Response {string hash = 1;}
