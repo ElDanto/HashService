@@ -1,8 +1,8 @@
 # Simple Service for generate short hash v.0.0.1
 ## Protoc
 1. install protoc
-2.  ```go mod tidy ```
-3.  ``` go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2 ```
+2.  `go mod tidy`
+3.  `go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2`
 
 ## GO:GENERATE
     `go generate ./...`
