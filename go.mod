@@ -1,4 +1,4 @@
-module github.com/ElDanto/HashService
+module github.com/ElDanto/ShortGen
 
 go 1.24.0
 

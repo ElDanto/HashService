@@ -1,0 +1,24 @@
+env: production
+
+api:
+  port: 8080
+  read_timeout: 10s
+  write_timeout: 10s
+  rate_limit: 100
+  enable_https: false
+
+worker:
+  cleanup_interval: 5m
+  batch_size: 1000
+  max_attempts: 3
+
+redis:
+  addr: "model-prod:6379"
+  pool_size: 50
+  token_ttl: 24h
+  dial_timeout: 2s
+
+logger:
+  level: info
+  format: json
+  file_path: "/var/log/shortgen.log"

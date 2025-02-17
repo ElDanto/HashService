@@ -1,2 +1,0 @@
-cron_config_path: "./internal/config/cron/config.yaml"
-server_config_path: "./internal/config/server/config.yaml"

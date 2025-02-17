@@ -23,7 +23,7 @@ services:
     networks:
       - redis-network
     volumes:
-      - redis-volume:/data:rw
+      - model-volume:/data:rw
     restart: unless-stopped
 
 volumes:

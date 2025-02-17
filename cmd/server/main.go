@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	"github.com/ElDanto/HashService/internal/models/redis"
-	pb "github.com/ElDanto/HashService/pkg/pb/hash"
+	"github.com/ElDanto/ShortGen/internal/domain/model"
+	pb "github.com/ElDanto/ShortGen/pkg/proto/hash"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"log"
@@ -16,7 +16,7 @@ type server struct {
 
 func (s *server) Do(ctx context.Context, in *pb.Request) (*pb.Response, error) {
 	log.Printf("Received: %v", in)
-	hash := redis.Hash{}
+	hash := model.Hash{}
 	return &pb.Response{
 		Hash: hash.Generate(),
 	}, nil

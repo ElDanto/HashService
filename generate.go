@@ -1,3 +1,3 @@
 package hashService
 
-//go:generate protoc --go_out=pkg/pb --go_opt=Mproto/hash.proto=github.com/ElDanto/HashService --go-grpc_out=pkg/pb --go-grpc_opt=Mproto/hash.proto=github.com/ElDanto/HashService --proto_path=proto proto/*.proto
+//go:generate protoc --go_out=pkg/proto --go_opt=Mproto/hash.proto=github.com/ElDanto/ShortGen --go-grpc_out=pkg/proto --go-grpc_opt=Mproto/hash.proto=github.com/ElDanto/ShortGen --proto_path=proto proto/*.proto
